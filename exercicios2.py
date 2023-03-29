@@ -3,7 +3,8 @@ print(7 == 7)
 # Colocar 7 == 5, verificar a resposta na execussão do programa;
 print(7 == 5)
 
-print("----------------------")
+"""####2. Operadores menor que (<) e maior que (>)
+"""
 
 # Colocar 7 < 7, verificar a resposta na execussão do programa;
 print(7 < 7)
@@ -14,7 +15,7 @@ print(7 > 7)
 # Colocar 7 > 5, verificar a resposta na execussão do programa;
 print(7 > 5)
 
-print("----------------------")
+"""####3. Operadores menor ou igual que (<) e maior ou igual que (>)"""
 
 # Colocar 7 <= 7, verificar a resposta na execussão do programa;
 print(7 <= 7)
@@ -25,14 +26,18 @@ print(7 >= 7)
 # Colocar 7 >= 5, verificar a resposta na execussão do programa;
 print(7 >= 7)
 
-print("----------------------")
+"""####4. Operador de diferente (!=)"""
 
 # Colocar 7 != 7, verificar a resposta na execussão do programa;
 print(7 != 7)
 # Colocar 7 != 5, verificar a resposta na execussão do programa;
 print(7 != 7)
 
-print("----------------------")
+"""##2 - Tabelas Verdade
+São tabelas que mostram algumas situações de entrada e suas saídas
+####1. Tabela do E (AND)
+O operador **AND** deve ser usado quando temos 2 ou mais condições que devem ser verdadeiras para o programa executar a ação desejada
+"""
 
 print("|   A\t|   B\t| SAÍDA |")
 print("|",False,"|",False,"|",False and False,"|")
@@ -40,15 +45,14 @@ print("|",True,"\t|",False,"|",True and False,"|")
 print("|",False,"|",True,"\t|",False and True,"|")
 print("|",True,"\t|",True,"\t|",True and True,"\t|")
 
-print("----------------------")
-
-
 # EXEMPLO: Verificar se uma idade é maior do que a 17 E menor do que 71.
 
 idade = int(input("Idade: "))
 print(idade > 17 and idade < 71)
 
-print("----------------------")
+"""####2. Tabela do OU (OR)
+O operador **OR** deve ser usado quando, pelo menos, 1 das condições for verdadeira para realizar uma ação desejada
+"""
 
 print("|   A\t|   B\t| SAÍDA |")
 print("|",False,"|",False,"|",False or False,"|")
@@ -56,23 +60,18 @@ print("|",True,"\t|",False,"|",True or False," |")
 print("|",False,"|",True,"\t|",False or True," |")
 print("|",True,"\t|",True,"\t|",True or True," |")
 
-print("----------------------")
-
 # EXEMPLO: Verificar se uma idade é menor do que a 18 OU maior do que 70.
 
 idade = int(input("Idade: "))
 print(idade < 18 or idade > 70)
 
-print("----------------------")
+"""####3. Tabela do XOR (^)"""
 
 print("|   A\t|   B\t| SAÍDA |")
 print("|",False,"|",False,"|",False ^ False,"|")
 print("|",True,"\t|",False,"|",True ^ False,"\t|")
 print("|",False,"|",True,"\t|",False ^ True,"\t|")
 print("|",True,"\t|",True,"\t|",True ^ True,"|")
-
-
-print("----------------------")
 
 # Reprodução de porcos
 # Coloque 0 para leitão e 1 para leitoa em uma lista
@@ -83,20 +82,37 @@ print("{} com {} é {}".format(porquinha, leitao, porquinha^leitao))
 print("{} com {} é {}".format(leitao, porquinha, leitao^porquinha))
 print("{} com {} é {}".format(porquinha, porquinha, porquinha^porquinha))
 
-print("----------------------")
+"""####4. Tabela de Negação (not)"""
 
 print("|   A\t| Não A |")
 print("|",False,"|",not False,"\t|")
 print("|",True,"\t|",not True,"|")
 
-print("----------------------")
+"""##3 - Condicionais
+#### Condição SE (IF)
+Usamos este tipo de condicional quando necessitamos que o programa teste algumas condições. Caso a condição seja verdadeira, o programa executará uma ação destinada àquela condição.
+```
+if condição 1:
+    bloco de códigos do if
+```
+Faz-se necessário que o código tenha esta estrutura, senão o Python apresentará erro de identação.
+"""
 
 n = 3
 if n == 2:
     print("{} igual a 2".format(n))
 
-
-print("----------------------")
+"""#### Condição SENÃO (ELSE)
+Para usar o else, temos que ter usado o if antes.
+```
+if condição 1:
+    bloco de códigos do if
+    
+else:
+    bloco de código do else.
+    Aqui finaliza a condicional
+```
+"""
 
 n = 3
 if n == 2:
@@ -104,7 +120,26 @@ if n == 2:
 else:
     print("{} diferente a 2".format(n))
 
-print("----------------------")
+"""#### Condição SENÃO SE (ELIF)
+O elif deve ser utilizado quando temos mais do que uma condição.
+```
+if condição 1:
+    bloco de códigos do if
+elif condição 2:
+    bloco de código do elif
+    
+else:
+    bloco de código do else.
+    Aqui finaliza a condicional
+```
+"""
+
+
+
+"""##4 - Exercícios
+###1 - Qual o maior.
+*Escreva um programa que recebe 2 valores e devolve o maior entre eles.*
+"""
 
 # Declaração da variável 1
 num_1 = int(input("1º número: "))
@@ -117,8 +152,10 @@ elif num_2 > num_1:
     print("{} é maior do que {}".format(num_2, num_1))
 else:
     print("São iguais")
-     
-print("----------------------")
+
+"""### 2 - Calculadora de preço da laranja.
+*Cada laranja custa R\$ 0,3. Mas quando compradas acima de uma dúzia, seu valor cai para R\$ 0,25 cada*
+"""
 
 # Declarar a entrada da quantidade de laranjas a ser comprada
 laranjas = int(input("Quantas laranjas deseja comprar?\n "))
@@ -131,7 +168,13 @@ else:
 # Imprimir na tela a mensagem: "x laranjas por Y reais totaliza: R$ Z"
 print("Você deve pagar R$ {:.2f}".format(valor))
 
-print("----------------------")
+"""###3 - Caluladora de Peso Ideal 
+Fazer uma calculadora em que o usuário digita Altura em metros e Peso em quilos e se é do sexo biológico Masculino ou Feminino. O programa devolve ao usuário a informação qual seu peso ideal e quando precisa emagrecer para chegar lá. 
+Ao final, o programa deve trazer uma frase motivadora para aqueles que estão acima do peso, frase parabenizando os que estão no peso ideal e uma outra frase de alerta aos que estão abaixo do peso.
+***Fórmulas***
+        >Masculino: (72.7 * Altura) - 50
+        >Feminino: (62.1 * Altura) - 44.7
+"""
 
 # Declarar a entrada da Altura
 altura = float(input("Altura: "))
@@ -160,7 +203,15 @@ elif diferenca < 0:
 else:
     print("Muito bem, você está no peso ideal")
 
-print("----------------------")
+"""###4 - É triangulo ou Não é triângulo?
+Para determinar se 3 segmentos de reta formam um triângulo, podemos fazer a verificação se a soma dos dois menores segmentos é maior do que o segmento maior.
+---
+    Segmentos: 2, 3 e 4
+    Soma dos dois menores: 2 + 3 = 5
+    Verificação: 5 > 4
+    Conclusão:Estes segmentos formam um triângulo
+---
+"""
 
 soma = 0
 maior = 0
@@ -190,9 +241,3 @@ if soma > maior:
     print("Forma triângulo")
 else:
     print("Não forma triângulo")
-
-print("----------------------")
-
-
-
-print("----------------------")
